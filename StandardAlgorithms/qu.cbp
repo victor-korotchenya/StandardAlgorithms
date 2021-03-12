@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="qu" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/qu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Weffc++" />
+					<Add option="-pedantic" />
+					<Add option="-w" />
+					<Add option="-Wextra" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-std=gnu++23" />
+					<Add option="-march=corei7" />
+					<Add option="--param destructive-interference-size=64" />
+					<Add option="-fopenmp" />
+					<Add option="-fconcepts-diagnostics-depth=8" />
+					<Add option="-D_DEBUG=1" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-fopenmp" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/qu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-Weffc++" />
+					<Add option="-pedantic" />
+					<Add option="-w" />
+					<Add option="-Wextra" />
+					<Add option="-m64" />
+					<Add option="-std=gnu++23" />
+					<Add option="-march=corei7" />
+					<Add option="--param destructive-interference-size=64" />
+					<Add option="-fopenmp" />
+					<Add option="-flto=auto" />
+				</Compiler>
+				<Linker>
+					<Add option="-O3" />
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-flto=auto" />
+					<Add option="-fopenmp" />
+				</Linker>
+			</Target>
+			<Target title="ClangDebug">
+				<Option output="bin/ClangDebug/qu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/ClangDebug/" />
+				<Option type="1" />
+				<Option compiler="clang" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-Weffc++" />
+					<Add option="-Wextra" />
+					<Add option="-march=corei7" />
+					<Add option="-std=gnu++2b" />
+					<Add option="-fopenmp" />
+					<Add option="-DLIBCXX_ENABLE_INCOMPLETE_FEATURES=ON" />
+					<Add option="-D_DEBUG=1" />
+				</Compiler>
+				<Linker>
+					<Add option="-fopenmp" />
+				</Linker>
+			</Target>
+			<Target title="ClangRelease">
+				<Option output="bin/ClangRelease/qu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/ClangRelease/" />
+				<Option type="1" />
+				<Option compiler="clang" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-Weffc++" />
+					<Add option="-Wextra" />
+					<Add option="-march=corei7" />
+					<Add option="-std=gnu++2b" />
+					<Add option="-fopenmp" />
+					<Add option="-DLIBCXX_ENABLE_INCOMPLETE_FEATURES=ON" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-fopenmp" />
+				</Linker>
+			</Target>
+			<Target title="ClangReleaseSani">
+				<Option output="bin/ClangReleaseSani/qu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/ClangReleaseSani/" />
+				<Option type="1" />
+				<Option compiler="clang" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-Weffc++" />
+					<Add option="-Wextra" />
+					<Add option="-march=corei7" />
+					<Add option="-std=gnu++2b" />
+					<Add option="-fopenmp" />
+					<Add option="-fsanitize=address,undefined" />
+					<Add option="-fno-omit-frame-pointer" />
+					<Add option="-DLIBCXX_ENABLE_INCOMPLETE_FEATURES=ON" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-fopenmp" />
+					<Add option="-fsanitize=address,undefined" />
+					<Add option="-fno-omit-frame-pointer" />
+				</Linker>
+			</Target>
+			<Target title="Tidy">
+				<Option output="bin/Tidy/qu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Tidy/" />
+				<Option type="1" />
+				<Option compiler="code_analysis" />
+				<Compiler>
+					<Add option="-D_DEBUG=1" />
+				</Compiler>
+				<Linker>
+					<LinkerExe value="Linker" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Graphs/avl_balance.h" />
+		<Unit filename="Graphs/avl_node.h" />
+		<Unit filename="Graphs/avl_tree.h" />
+		<Unit filename="Graphs/avl_tree_base.h" />
+		<Unit filename="Graphs/bst_rotate.h" />
+		<Unit filename="Graphs/bst_tests.h" />
+		<Unit filename="Graphs/bst_validate.h" />
+		<Unit filename="Graphs/red_black_tree.h" />
+		<Unit filename="Graphs/red_black_tree_tests.cpp" />
+		<Unit filename="Graphs/red_black_tree_tests.h" />
+		<Unit filename="Graphs/red_black_tree_validator.h" />
+		<Unit filename="Numbers/merge.h" />
+		<Unit filename="Numbers/merge_tests.cpp" />
+		<Unit filename="Numbers/merge_tests.h" />
+		<Unit filename="Utilities/base_test_case.cpp" />
+		<Unit filename="Utilities/base_test_case.h" />
+		<Unit filename="Utilities/compute_core_count.cpp" />
+		<Unit filename="Utilities/compute_core_count.h" />
+		<Unit filename="Utilities/console_color.cpp" />
+		<Unit filename="Utilities/console_color.h" />
+		<Unit filename="Utilities/elapsed_time_ns.h" />
+		<Unit filename="Utilities/ert.h" />
+		<Unit filename="Utilities/get_sub_test_semaphore.cpp" />
+		<Unit filename="Utilities/get_sub_test_semaphore.h" />
+		<Unit filename="Utilities/has_openmp.cpp" />
+		<Unit filename="Utilities/is_little_endian.cpp" />
+		<Unit filename="Utilities/is_little_endian.h" />
+		<Unit filename="Utilities/launch_exception.cpp" />
+		<Unit filename="Utilities/launch_exception.h" />
+		<Unit filename="Utilities/print.h" />
+		<Unit filename="Utilities/project_constants.h" />
+		<Unit filename="Utilities/random.cpp" />
+		<Unit filename="Utilities/random.h" />
+		<Unit filename="Utilities/random_generator.h" />
+		<Unit filename="Utilities/require_utilities.h" />
+		<Unit filename="Utilities/run_until_success.cpp" />
+		<Unit filename="Utilities/run_until_success.h" />
+		<Unit filename="Utilities/simple_test_case.h" />
+		<Unit filename="Utilities/stringer.h" />
+		<Unit filename="Utilities/test_function.h" />
+		<Unit filename="Utilities/test_utilities.h" />
+		<Unit filename="Utilities/w_stream.cpp" />
+		<Unit filename="Utilities/w_stream.h" />
+		<Unit filename="Utilities/zu_string.h" />
+		<Unit filename="mainq.pp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,6 @@
+<keymap version="1" name="ReSharper copy" parent="ReSharper">
+  <action id="CMake.CompileCurrentFile">
+    <keyboard-shortcut first-keystroke="ctrl f7" />
+    <keyboard-shortcut first-keystroke="f8" />
+  </action>
+</keymap>

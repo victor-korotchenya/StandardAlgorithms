@@ -1,0 +1,90 @@
+# https://clang.llvm.org/extra/clang-tidy/
+# https://clang.llvm.org/extra/clang-tidy/checks/list.html
+#
+# Unused checks: abseil, altera, android, boost, darwin, fuchsia, llvmlibc, mpi, objc, zircon, , , 
+#
+
+Checks: 'bugprone-*,cert-*,clang-*,concurrency-*,cppcoreguidelines-*,-cppcoreguidelines-pro-type-union-access,google-*,-google-readability-namespace-comments,hicpp-*,llvm-*,-llvm-header-guard,misc-*,-misc-no-recursion,modernize-*,openmp-*,performance-*,portability-*,readability-*'
+
+CheckOptions:
+  cppcoreguidelines-narrowing-conversions.PedanticMode: 'true'
+
+  # 3 lines are not enough. Moreover, this is REQUIRED to copy-paste from the '.clang-format' file.
+  llvm-namespace-comment.ShortNamespaceLines: '4'
+  performance-inefficient-string-concatenation.StrictMode: 'true'
+
+# readability-identifier-naming
+  # CamelCase
+  readability-identifier-naming.InlineNamespaceCase: 'CamelCase'
+  readability-identifier-naming.NamespaceCase: 'CamelCase'
+
+  # lower_case
+  readability-identifier-naming.AbstractClassCase: 'lower_case'
+  readability-identifier-naming.ClassCase: 'lower_case'
+  readability-identifier-naming.ClassConstantCase: 'lower_case'
+  readability-identifier-naming.ClassMemberCase: 'lower_case'
+  readability-identifier-naming.ClassMethodCase: 'lower_case'
+  readability-identifier-naming.ConstantCase: 'lower_case'
+  readability-identifier-naming.ConstantMemberCase: 'lower_case'
+  readability-identifier-naming.ConstantParameterCase: 'lower_case'
+  readability-identifier-naming.ConstantPointerParameterCase: 'lower_case'
+  readability-identifier-naming.ConstexprFunctionCase: 'lower_case'
+  readability-identifier-naming.ConstexprMethodCase: 'lower_case'
+  readability-identifier-naming.ConstexprVariableCase: 'lower_case'
+  readability-identifier-naming.EnumCase: 'lower_case'
+  readability-identifier-naming.EnumConstantCase: 'lower_case'
+  readability-identifier-naming.FunctionCase: 'lower_case'
+  readability-identifier-naming.GlobalConstantCase: 'lower_case'
+  readability-identifier-naming.GlobalConstantPointerCase: 'lower_case'
+  readability-identifier-naming.GlobalFunctionCase: 'lower_case'
+  readability-identifier-naming.GlobalPointerCase: 'lower_case'
+  readability-identifier-naming.GlobalVariableCase: 'lower_case'
+  readability-identifier-naming.LocalConstantCase: 'lower_case'
+  readability-identifier-naming.LocalConstantPointerCase: 'lower_case'
+  readability-identifier-naming.LocalPointerCase: 'lower_case'
+  readability-identifier-naming.LocalVariableCase: 'lower_case'
+  readability-identifier-naming.MemberCase: 'lower_case'
+  readability-identifier-naming.MethodCase: 'lower_case'
+  readability-identifier-naming.ParameterCase: 'lower_case'
+  readability-identifier-naming.ParameterPackCase: 'lower_case'
+  readability-identifier-naming.PointerParameterCase: 'lower_case'
+  readability-identifier-naming.PrivateMemberCase: 'lower_case'
+  readability-identifier-naming.PrivateMethodCase: 'lower_case'
+  readability-identifier-naming.ProtectedMemberCase: 'lower_case'
+  readability-identifier-naming.ProtectedMethodCase: 'lower_case'
+  readability-identifier-naming.PublicMemberCase: 'lower_case'
+  readability-identifier-naming.PublicMethodCase: 'lower_case'
+  readability-identifier-naming.ScopedEnumConstantCase: 'lower_case'
+  readability-identifier-naming.StaticConstantCase: 'lower_case'
+  readability-identifier-naming.StaticVariableCase: 'lower_case'
+  readability-identifier-naming.StructCase: 'lower_case'
+  readability-identifier-naming.TemplateParameterCase: 'lower_case'
+  readability-identifier-naming.TemplateTemplateParameterCase: 'lower_case'
+  readability-identifier-naming.TypeAliasCase: 'lower_case'
+  readability-identifier-naming.TypedefCase: 'lower_case'
+  readability-identifier-naming.TypeTemplateParameterCase: 'lower_case'
+  readability-identifier-naming.UnionCase: 'lower_case'
+  readability-identifier-naming.ValueTemplateParameterCase: 'lower_case'
+  readability-identifier-naming.VariableCase: 'lower_case'
+  readability-identifier-naming.VirtualMethodCase: 'lower_case'
+
+  # UPPER_CASE
+  readability-identifier-naming.MacroDefinitionCase: 'UPPER_CASE'
+
+  # Temporal hack to fix a "warning: invalid case style for type template parameter 'expr-type' [readability-identifier-naming]"
+  readability-identifier-naming.TypeTemplateParameterIgnoredRegexp: 'expr-type'
+
+  # IgnoredRegexp, Prefix and Suffix
+  readability-identifier-naming.ConstantMemberIgnoredRegexp: '^[A-Z]([a-z]|[0-9]){2,}(_[a-z]([a-z]|[0-9]){2,})*$'
+  readability-identifier-naming.PrivateMemberIgnoredRegexp: '^[A-Z]([a-z]|[0-9]){2,}(_[a-z]([a-z]|[0-9]){2,})*$'
+  readability-identifier-naming.TemplateParameterIgnoredRegexp: '^[A-Z]|[a-z]$'
+  readability-identifier-naming.TemplateTemplateParameterIgnoredRegexp: '^[A-Z]|[a-z]$'
+
+  # Others
+  readability-identifier-naming.AggressiveDependentMemberLookup: 'true'
+
+
+  readability-inconsistent-declaration-parameter-name.Strict: 'true'
+
+FormatStyle: 'file'
+...

@@ -1,0 +1,10 @@
+<application>
+  <component name="CPPToolchains" version="4">
+    <toolchains detectedVersion="5">
+      <toolchain name="ClangW" toolSetKind="MINGW" toolSetPath="C:\Projects\msys64\clang64" customMakePath="C:\Projects\msys64\clang64\bin\mingw32-make.exe" customCCompilerPath="C:\Projects\msys64\clang64\bin\clang.exe" customCXXCompilerPath="C:\Projects\msys64\clang64\bin\clang++.exe" debuggerKind="CUSTOM_GDB" customGDBPath="C:\Projects\msys64\mingw64\bin\gdb.exe" />
+      <toolchain name="MinGW" toolSetKind="MINGW" toolSetPath="C:\Projects\msys64\mingw64" debuggerKind="CUSTOM_GDB" customGDBPath="C:\Projects\msys64\mingw64\bin\gdb.exe" />
+      <toolchain name="Visual Studio" toolSetKind="MSVC" toolSetPath="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community" debuggerKind="BUNDLED_LLDB" />
+      <toolchain name="Cygwin" toolSetKind="CYGWIN" debuggerKind="CUSTOM_GDB" customGDBPath="\bin\gdb.exe" />
+    </toolchains>
+  </component>
+</application>
